@@ -1,0 +1,63 @@
+.Game{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+    background-image: url(https://c.tenor.com/AQecc2g8uuAAAAAC/duck-dance.gif),
+    url(https://c.tenor.com/AQecc2g8uuAAAAAC/duck-dance.gif);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 200px, 880px;
+    background-size: contain;
+}
+
+p{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: bold;
+}
+
+.botoon{
+    color:darkblue;
+    background-image: url(https://htmlcolorcodes.com/assets/images/colors/bright-blue-color-solid-background-1920x1080.png);
+    font-size: 32px;
+}
+
+.textoo{
+    background-color:dodgerblue;
+    font-size: 32px;
+    color: white;
+}
+
+@keyframes fadeInAnimation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.resultado{
+    animation-name: fadeInResult;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    color:darkorange;
+}
+
+.titulo{
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInResult {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
