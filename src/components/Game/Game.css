@@ -1,13 +1,7 @@
 .Game{
-    display:flex;
-    flex-direction: column;
+    display: inline;
     align-items: center;
-    margin: 16px;
-    background-image: url(https://c.tenor.com/AQecc2g8uuAAAAAC/duck-dance.gif),
-    url(https://c.tenor.com/AQecc2g8uuAAAAAC/duck-dance.gif);
-    background-repeat: no-repeat, no-repeat;
-    background-position: 200px, 880px;
-    background-size: contain;
+    margin: 2px;
 }
 
 p{

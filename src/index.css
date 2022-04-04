@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://c.tenor.com/AQecc2g8uuAAAAAC/duck-dance.gif),
+  url(https://c.tenor.com/AQecc2g8uuAAAAAC/duck-dance.gif);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 100px, 1100px;
+  background-size: 200px;
 }
 
 code {
