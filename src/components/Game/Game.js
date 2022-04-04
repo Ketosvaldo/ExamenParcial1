@@ -7,19 +7,28 @@ class Game extends Component {
         this.state = {
             number: "",
             message: "",
-            random: "0",
+            random: "",
             player: "0",
             cpu: "0",
         }
     }
 
-    handleOnClick = e => {
+    handleOnChange = e => {
         const {target: {value}} = e;
+        console.log(value);
         const newnumber = generateRandomNumber(3);
+        if(value.trim() > 0){
+            this.setState({
+                number: value,
+                random: newnumber,
+            });
+        }
         this.setState({
-            number: value,
-            random: newnumber,
+            message: "",
         })
+    }
+
+    handleOnClick = () => {
         console.log(this.state.number);
         console.log(this.state.random);
         const number = parseInt(this.state.number);
@@ -78,38 +87,26 @@ class Game extends Component {
         return (
             <div className="Game">
                 <p className="titulo">Piedra, papel o tijeras</p>
-                <input 
-                    type="image"
-                    name="piedra"
+                <l>1)</l>
+                <img 
                     src="https://cdn77.pressenza.com/wp-content/uploads/2017/11/2417C4AC-F2BE-4A94-817A-CFF04360DEE9-720x540.png"
-                    value = "1"
                     width = "200px"
-                    //onChange = {this.handleOnChange}
-                    onClick = {this.handleOnClick}
-                    className="piedraa"
                     display="inline-block"
                 />
-                <input 
-                    type="image"
-                    name="papel"
+                <l>2)</l>
+                <img
                     src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Paper_sheet.jpg"
-                    value = "2"
                     width = "150px"
-                    //onChange = {this.handleOnChange}
-                    onClick = {this.handleOnClick}
-                    className="papell"
                     display="inline-block"
                 />
-                <input 
-                    type="image"
-                    name="tijera"
+                <l>3)</l>
+                <img 
                     src="https://www.truper.com/media/product/3a9/tijera-para-oficina-6-1-2-de-acero-inoxidable-d05.jpg"
-                    value = "3"
                     width = "170px"
-                    //onChange = {this.handleOnChange}
-                    onClick = {this.handleOnClick}
-                    className="tijeraa"
                 />
+                <br/>
+                <input type="text" onChange={this.handleOnChange}/>
+                <button onClick={this.handleOnClick}> Subir </button>
                 <p className={(this.state.message) && 'resultado'}>{this.state.message }</p>
                 <br/>
                 <p>Jugador: {this.state.player}</p>
