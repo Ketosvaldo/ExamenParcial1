@@ -38,43 +38,43 @@ class Game extends Component {
             message: text,
         })
         //------------------
-        if(number == 1){
-            if(random == 2){
+        if(number === 1){
+            if(random === 2){
                 this.setState({
                     cpu: parseInt(this.state.cpu) + 1,
                 })
             }
-            else if(random == 3){
+            else if(random === 3){
                 this.setState({
                     player: parseInt(this.state.player) + 1,
                 })
             }
         }
-        else if(number == 2){
-            if(random == 1){
+        else if(number === 2){
+            if(random === 1){
                 this.setState({
                     player: parseInt(this.state.player) + 1,
                 })
             }
-            else if(random == 3){
+            else if(random === 3){
                 this.setState({
                     cpu: parseInt(this.state.cpu) + 1,
                 })
             }
         }
-        else if(number == 3){
-            if(random == 2){
+        else if(number === 3){
+            if(random === 2){
                 this.setState({
                     player: parseInt(this.state.player) + 1,
                 })
             }
-            else if(random == 1){
+            else if(random === 1){
                 this.setState({
                     cpu: parseInt(this.state.cpu) + 1,
                 })
             }
         }
-        if(parseInt(this.state.cpu) == 2 || parseInt(this.state.player) == 2){
+        if(parseInt(this.state.cpu) === 2 || parseInt(this.state.player) === 2){
             text = winner(parseInt(this.state.player), parseInt(this.state.cpu));
             this.setState({
                 cpu: "0",
