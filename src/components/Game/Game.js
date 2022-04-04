@@ -92,17 +92,20 @@ class Game extends Component {
                     src="https://cdn77.pressenza.com/wp-content/uploads/2017/11/2417C4AC-F2BE-4A94-817A-CFF04360DEE9-720x540.png"
                     width = "200px"
                     display="inline-block"
+                    alt="piedra"
                 />
                 <h1>2)</h1>
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Paper_sheet.jpg"
                     width = "150px"
                     display="inline-block"
+                    alt="papel"
                 />
                 <h1>3)</h1>
                 <img 
                     src="https://www.truper.com/media/product/3a9/tijera-para-oficina-6-1-2-de-acero-inoxidable-d05.jpg"
                     width = "170px"
+                    alt="tijera"
                 />
                 <br/>
                 <input type="text" onChange={this.handleOnChange}/>
@@ -123,36 +126,36 @@ function generateRandomNumber(max, min = 1){
 }
 
 function winner(jugador, maquina){
-    if(jugador == 2){
+    if(jugador === 2){
         return "Has ganado :D"
     }
-    else if(maquina == 2){
+    else if(maquina === 2){
         return "Has perdido UnU"
     }
 }
 
 function calculateText(number, random){
-    if(number == random){
+    if(number === random){
         return "Empate hermano"
     }
-    else if(number == 1){
-        if(random == 2){
+    else if(number === 1){
+        if(random === 2){
             return "Punto para la computadora"
         }
         else{
             return "Punto para el jugador"
         }
     }
-    else if(number == 2){
-        if(random == 1){
+    else if(number === 2){
+        if(random === 1){
             return "Punto para el jugador"
         }
         else{
             return "Punto para la computadora"
         }
     }
-    else if(number == 3){
-        if(random == 2){
+    else if(number === 3){
+        if(random === 2){
             return "Punto para el jugador";
         }
         else{
