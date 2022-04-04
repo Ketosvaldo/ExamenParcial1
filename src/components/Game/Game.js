@@ -87,19 +87,19 @@ class Game extends Component {
         return (
             <div className="Game">
                 <p className="titulo">Piedra, papel o tijeras</p>
-                <l>1)</l>
+                <h1>1)</h1>
                 <img 
                     src="https://cdn77.pressenza.com/wp-content/uploads/2017/11/2417C4AC-F2BE-4A94-817A-CFF04360DEE9-720x540.png"
                     width = "200px"
                     display="inline-block"
                 />
-                <l>2)</l>
+                <h1>2)</h1>
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Paper_sheet.jpg"
                     width = "150px"
                     display="inline-block"
                 />
-                <l>3)</l>
+                <h1>3)</h1>
                 <img 
                     src="https://www.truper.com/media/product/3a9/tijera-para-oficina-6-1-2-de-acero-inoxidable-d05.jpg"
                     width = "170px"
